@@ -535,6 +535,15 @@ section {
 
 .section-title p {
   margin-bottom: 0;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.section-title2 p{
+  padding-bottom: 30px;
+  margin-bottom: 0;
+  justify-content: space-between;
+  align-items: start;
 }
 
 /*--------------------------------------------------------------
@@ -2293,3 +2302,4 @@ section {
   color: #fff;
   text-decoration: none;
 }
+
