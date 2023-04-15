@@ -437,6 +437,7 @@ h6 {
   color: #eee;
   margin-bottom: 50px;
   font-size: 24px;
+  text-align: left;
 }
 
 #hero .get-started-icon {
@@ -730,7 +731,7 @@ section {
 }
 
 .about .video-box {
-  background: url("../img/about-img.jpg") center center no-repeat;
+  background: url("../img/Como-llegar-a-Spark.png") center center no-repeat;
   background-size: cover;
   min-height: 500px;
 }
@@ -928,9 +929,26 @@ section {
   background: rgba(255, 255, 255, 0.9);
   padding: 15px 30px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
-  transition: ease-in-out 0.4s;
+  transition: 0.3s ease-in-out; /* Aplicamos la transición a todo el contenedor */
   border-radius: 5px;
+}
+
+.values .card-body h5,
+.values .card-body p,
+.values .card-body ul>li {
+  color: black; /* Color del texto */
+  transition: background-color 0.3s, color 0.3s; /* Aplicamos la transición a todo el contenido */
+}
+
+.values .card-body ul li {
+  /*list-style: none; Quitamos los puntos de la lista */
+
+}
+
+.values .card-body:hover h5,
+.values .card-body:hover p,
+.values .card:hover ul>li {
+  color: white; /* Color del texto al hacer hover en el contenedor */
 }
 
 .values .card-title {
@@ -943,8 +961,10 @@ section {
   color: #473d3a;
 }
 
-.values .card-text {
+.values .card-text,
+.values .card-text > ul li{
   color: #4b4949;
+  text-align: justify;
 }
 
 .values .read-more a {
@@ -966,7 +986,9 @@ section {
 .values .card:hover .read-more a,
 .values .card:hover .card-title,
 .values .card:hover .card-title a,
-.values .card:hover .card-text {
+.values .card:hover .card-text,
+.values .card:hover .card-text > ul 
+{
   color: #fff;
 }
 
@@ -2303,3 +2325,150 @@ section {
   text-decoration: none;
 }
 
+.form{
+  background-color: #fff;
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+  border-radius: 1em;
+  padding: 3.5em 1.5em;
+}
+
+.form__container{
+  width: 100%;
+  display: grid;
+  gap: 1em;
+  grid-auto-columns: 100%;
+}
+
+.form__title{
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: .4em;
+}
+
+.form__input{
+  font-family: inherit;
+  font-size: 1rem;
+  padding: .4em 1em;
+  outline: none;
+  border: none;
+  border: 1px  solid #bbb0b0;
+  border-radius: 0.2em;
+}
+
+.form__input--message{
+  resize: none;
+  padding: 1.8em 1em;
+  margin-bottom: .5em;
+}
+
+.form__cta{
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: #089FE0;
+  color: #fff;
+  border: none;
+  font-weight: 300;
+  padding: .7em 0;
+  border-radius: .2em;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+@media (max-width:450px){
+  .form{
+    padding: 3.5em 1em;
+  }
+}
+
+.form-box{
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    font-size: 2em;
+    color: #656262;
+    text-align: center;
+}
+
+.inputbox{
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #00c3ff;
+}
+
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #2090d6;
+    font-size: 1eme;
+    pointer-events: none;
+    transition: .5s;
+}
+
+input:focus ~ label,
+input:valid ~ label{
+    top: -5px;
+}
+
+.inputbox input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    color: #000000;
+}
+
+.inputbox ion-icon{
+    position: absolute;
+    right: 8px;
+    color: #003462;
+    font-size: 1.2em;
+    top: 20px;
+}
+
+button{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: #003462;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.register{
+    font-size: .9em;
+    color: #ff0000;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.register p a{
+    text-decoration: none;
+    color: #ff0000;
+    font-weight: 600;
+}
+
+.register p a:hover{
+    text-decoration: underline;
+}
