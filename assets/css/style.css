@@ -778,7 +778,7 @@ section {
   animation-timing-function: steps;
   opacity: 1;
   border-radius: 50%;
-  border: 5px solid rgb(0, 52, 98, 0.7);
+  border: 15px solid rgb(0, 52, 98, 0.7);
   top: -15%;
   left: -15%;
   background: rgba(198, 16, 0, 0);
@@ -786,7 +786,7 @@ section {
 
 .about .play-btn:hover::after {
   border-left: 15px solid #2090d6;
-  transform: scale(20);
+  transform: scale(40);
 }
 
 .about .play-btn:hover::before {
@@ -912,6 +912,7 @@ section {
 .services .description {
   line-height: 24px;
   font-size: 14px;
+  text-align: justify;
 }
 
 /*--------------------------------------------------------------
@@ -2474,4 +2475,8 @@ button{
 
 .register p a:hover{
     text-decoration: underline;
+}
+
+.justificar{
+  text-align: justify;
 }
